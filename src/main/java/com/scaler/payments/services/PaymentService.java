@@ -1,5 +1,7 @@
 package com.scaler.payments.services;
 
-public interface PaymentService {
+import com.stripe.exception.StripeException;
 
+public interface PaymentService {
+    String makePayment(String orderId, Long amount) throws StripeException;
 }
